@@ -42,6 +42,7 @@ int main(void){
     //o float mantem 23 casas decimais apos o . e completa o resto com 0 para manter a precisao forcada
     //ja o double mantem 49 casas decimais apos 0 . e completa o resto com 0 para manter a precisao forcada
     //logo, o float possui menos espaco de armazenamento disponivel.
+    
     return 0;
 }
 
