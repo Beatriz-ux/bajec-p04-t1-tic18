@@ -16,4 +16,9 @@ int main(){
     cout << "8 \t" << dec << (int) ch << "\t\t" << hex << (int)ch << "\t\t" << oct << (int)ch++ << '\n'; 
     cout << "9 \t" << dec << (int) ch << "\t\t" << hex << (int)ch << "\t\t" << oct << (int)ch++ << '\n'; 
 
+    cout << "\n\nDigite um caractere: ";
+    cin >> ch;
+    cout << "DIG\tASCII(dec)\tASCII(hex)\tASCII(oct)\n";
+    cout << ch << "\t" << dec << (int) ch << "\t\t" << hex << (int)ch << "\t\t" << oct << (int)ch<< '\n';
+    return 0;
 }
