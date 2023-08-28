@@ -1,4 +1,5 @@
 #ignorar os arquivos executaveis
 src/output/
 
-.json
+.vscode/
+```
