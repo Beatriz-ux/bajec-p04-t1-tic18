@@ -44,6 +44,9 @@ int main(){
     // de enviar um conteudo para uma mesma "forma" e dps voltar
     // nao alterou em nada o resultado
 
+    ui = numeric_limits<unsigned int>::max();
+    cout << "Limite superior do tipo >long int< : " << ui << endl;
+    cout << "Limite inferior do tipo >long int< : " << numeric_limits<unsigned int>::min() << endl;
 
     return 0;
 }
