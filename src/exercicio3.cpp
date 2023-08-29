@@ -22,11 +22,14 @@ int main(){
     // de conteudo. 
 
 
-
     cout << "Limite superior do tipo >int< : " << numeric_limits<int>::max() << endl;
     cout << "Limite inferior do tipo >int< : " << numeric_limits<int>::min() << endl;
     cout << "Limite superior do tipo >usigned long int< : " << uli << endl;
     cout << "Limite inferior do tipo >usigned long int< : " << numeric_limits<unsigned long>::min() << endl;
+
+    li = numeric_limits<long>::max();
+    cout << "Limite superior do tipo >long int< : " << li << endl;
+    cout << "Limite inferior do tipo >long int< : " << numeric_limits<long>::min() << endl;
 
 
 
