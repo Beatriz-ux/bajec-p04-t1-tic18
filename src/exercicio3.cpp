@@ -45,8 +45,8 @@ int main(){
     // nao alterou em nada o resultado
 
     ui = numeric_limits<unsigned int>::max();
-    cout << "Limite superior do tipo >long int< : " << ui << endl;
-    cout << "Limite inferior do tipo >long int< : " << numeric_limits<unsigned int>::min() << endl;
+    cout << "Limite superior do tipo >unsigned int< : " << ui << endl;
+    cout << "Limite inferior do tipo >unsigned int< : " << numeric_limits<unsigned int>::min() << endl;
 
     return 0;
 }
