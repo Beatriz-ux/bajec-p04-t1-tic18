@@ -6,13 +6,14 @@ using namespace std;
 int main(){
     unsigned long int uli = numeric_limits<unsigned long>::max();
     long int li = uli;
+    unsigned int ui;
     
     cout << "Valor de >uli<: " << uli << endl;
     cout << "Valor de >li<: " << li << endl;
     uli = li;
     cout << "Novo Valor de >uli<: " << uli << "\n\n";
     
-    // o tamanho de uli e li é igual como mostrado no codigo comentario abaixo
+    // Na minha maquina o tamanho de uli e li é igual, o que foi é mostrado no codigo abaixo
     //
     // cout << "tamanho de long int e unsigned eh igual? " << (sizeof(unsigned long int) == sizeof(long int)) << endl;
     //
@@ -31,6 +32,17 @@ int main(){
     cout << "Limite superior do tipo >long int< : " << li << endl;
     cout << "Limite inferior do tipo >long int< : " << numeric_limits<long>::min() << endl;
 
+    ui = li;
+    cout << "\n\nValor de >li<: " << li << endl;
+    cout << "Valor de >ui<: " << ui << endl;
+    li = ui;
+    cout << "Novo Valor de >li<: " << li << "\n\n";
+
+    // Na minha maquina, int e long int possuem o mesmo tamamanho, entao o conteudo de um long int
+    // "cabe" em uma variavel do tipo unsigned int (que tem o mesmo tamanho de um int), e ainda sobraria
+    // um bit na variavel ui (o que faz o limite superiro do usigned int ser maior), entao a operação 
+    // de enviar um conteudo para uma mesma "forma" e dps voltar
+    // nao alterou em nada o resultado
 
 
     return 0;
