@@ -12,12 +12,18 @@ int main(){
     cout << "Limite inferior do tipo >float< : " << numeric_limits<float>::min() << endl;
     
     cout << fixed;
-    cout << "Valor de pif (2 casas decimais): " << setprecision(2) << pif << endl;
+    cout << "\nValor de pif (2 casas decimais): " << setprecision(2) << pif << endl;
+    cout << "Valor de pid (2 casas decimais): " << setprecision(2) << pid << endl;    
     cout << "Valor de pif (4 casas decimais): " << setprecision(4) << pif << endl;
+    cout << "Valor de pid (4 casas decimais): " << setprecision(4) << pid << endl;
     cout << "Valor de pif (8 casas decimais): " << setprecision(8) << pif << endl;
+    cout << "Valor de pid (8 casas decimais): " << setprecision(8) << pid << endl;
     cout << "Valor de pif (16 casas decimais): " << setprecision(16) << pif << endl;
+    cout << "Valor de pid (16 casas decimais): " << setprecision(16) << pid << endl;
+    // o pid se aproxima mais do valor dado para PI, tendo mudança so no ultimo digito de impressao
 
-    cout << "\nValor de pid: " << setprecision(60) << pid << endl;
+
+    cout << "\n\nValor de pid: " << setprecision(60) << pid << endl;
 
     
     return 0;
