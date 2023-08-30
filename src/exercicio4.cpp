@@ -10,7 +10,12 @@ int main(){
     cout << "Limite superior do tipo >float< : " << numeric_limits<float>::max() << endl;
     cout << "Limite inferior do tipo >float< : " << numeric_limits<float>::min() << endl;
     
-    cout << "Valor de pif: " << setprecision(38) << pif << endl;
+    cout << fixed;
+    cout << "Valor de pif (2 casas decimais): " << setprecision(2) << pif << endl;
+    cout << "Valor de pif (4 casas decimais): " << setprecision(4) << pif << endl;
+    cout << "Valor de pif (8 casas decimais): " << setprecision(8) << pif << endl;
+    cout << "Valor de pif (16 casas decimais): " << setprecision(16) << pif << endl;
+
 
     
     return 0;
