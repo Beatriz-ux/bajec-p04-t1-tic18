@@ -23,7 +23,17 @@ int main(){
     // o pid se aproxima mais do valor dado para PI, tendo mudança so no ultimo digito de impressao
 
 
-    cout << "\n\nValor de pid: " << setprecision(60) << pid << endl;
+    cout << "\nValor de pid: " << setprecision(60) << pid << endl;
+
+    cout << "\ntamanho double: "<< sizeof(double) << " | " << "tamanho long double: "<< sizeof(long double) << endl;
+    // no meu sistema o longo double e o double nao tem o mesmo tamanho
+    // double 8 bytes, long double 16 bytes
+    cout << scientific ;
+    cout << "limite inferior double: "<<numeric_limits<double>::min() << " | " << "limite superior double: "<< numeric_limits<double>::max() << endl;
+    cout << "limite inferior long double: "<< numeric_limits<long double>::min() << " | " << "limite superior long double: "<< numeric_limits<long double>::max() << endl;
+    // os limites inferiores e superiores tambem foram diferentes
+    // double: [2.225073858507201383090232717332404064219215980462331830553327e-308 - 1.797693134862315708145274237317043567980705675258449965989175e+308]
+    // long double [3.362103143112093506262677817321752602598079344846471240108827e-4932 - 1.189731495357231765021263853030970205169063322294624200440324e+4932]
 
     
     return 0;
