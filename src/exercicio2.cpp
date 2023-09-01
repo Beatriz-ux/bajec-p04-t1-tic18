@@ -5,8 +5,9 @@
 using namespace std;
 
 int main(void){
-    setlocale(LC_ALL,"");
-
+    //setlocale(LC_ALL, "pt_BR.UTF-8");
+    //locale::global(locale("pt_BR.UTF-8"));
+    wcout.imbue(locale("pt_BR.UTF-8"));
     char c = '0';
     wchar_t wc;
 
