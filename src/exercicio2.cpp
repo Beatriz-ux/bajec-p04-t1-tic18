@@ -95,9 +95,9 @@ int main(void)
           << hex << int(caracter) << endl;
 
     cout << "D)" << endl;
-    /*Para ler caracteres especiais é preciso ir nas configurações do UTF-8
-        pesquisar por "Iso" e escolher a opção "Weastern ISO-8859-1" e reiniciar o vs code.
-        após isso trocasse o  tipo da variavel de char para wchar_t, pois o char não suporta caracteres especiais.
+    /*Para ler caracteres especiais Ã© preciso ir nas configuraÃ§Ãµeses do UTF-8
+        pesquisar por "Iso" e escolher a opÃ§Ã£o "Weastern ISO-8859-1" e reiniciar o vs code.
+        apÃ³s isso trocasse o  tipo da variavel de char para wchar_t, pois o char nÃ£o suporta caracteres especiais.
         Agora o codigo abaixo funciona para caracteres especiais e normais.
     */
     wchar_t specialCaracter;
