@@ -7,13 +7,13 @@ int main(void)
     setlocale(LC_ALL, "Portuguese_Brazil");
     
     cout << "A)" << endl;
-    cout << "Valor máximo de int: " << INT_MAX << endl;
-    cout << "Valor mínimo de int: " << INT_MIN << endl;
+    cout << "Valor mÃ¡ximo de int: " << INT_MAX << endl;
+    cout << "Valor mÃ¡nimo de int: " << INT_MIN << endl;
 
     cout << "B)" << endl;
     unsigned long int uli = ULONG_MAX;
-    cout << "Valor máximo de unsigned long int: " << uli << endl;
-    cout << "Valor mínimo de unsigned long int: " << 0 << endl;
+    cout << "Valor mÃ¡ximo de unsigned long int: " << uli << endl;
+    cout << "Valor mÃ¡ximo de unsigned long int: " << 0 << endl;
 
     cout << "C)" << endl;
     long int li = uli;
@@ -22,14 +22,14 @@ int main(void)
     cout << "Valor de uli = " << uli << endl;
     // Saida do console -> Valor de li = -1
     //                     Valor de uli = 4294967295
-    // Quando fazemos a atribuição do li=uli, vemos que a sua representaçao muda para -1 , ja que agora o bit de sinal importa.
-    // E após retonar esse valo a uli, vemos que o valor continua o mesmo, ja que agora o bit mais significativo faz parte do numero como um todo.
-    // Não temos perca de infomação, pois ambos os tipos possuem a mesma quantidade de bits para representar um número.
+    // Quando fazemos a atribuiÃ§Ã£o do li=uli, vemos que a sua representaÃ§ao muda para -1 , ja que agora o bit de sinal importa.
+    // E apÃ³s retonar esse valo a uli, vemos que o valor continua o mesmo, ja que agora o bit mais significativo faz parte do numero como um todo.
+    // NÃ£o temos perca de infomaÃ§Ã£o, pois ambos os tipos possuem a mesma quantidade de bits para representar um nÃºmero.
 
     cout << "D)" << endl;
     li = LONG_MAX;
-    cout << "Valor máximo de long int: " << li << endl;
-    cout << "Valor mínimo de long int: " << LONG_MIN << endl;
+    cout << "Valor mÃ¡ximo de long int: " << li << endl;
+    cout << "Valor mÃ¡nimo de long int: " << LONG_MIN << endl;
 
     cout << "E)" << endl;
     unsigned int ui = li;
@@ -37,17 +37,17 @@ int main(void)
     cout << "Valor de li = " << li << endl;
     cout << "Valor de ui = " << ui << endl;
 
-    // Saída do console -> Valor de li = 2147483647
+    // SaÃ­da do console -> Valor de li = 2147483647
     //                     Valor de ui = 2147483647
-    // Esse caso temos a mesma representação no console
+    // Esse caso temos a mesma representaÃ§Ã£o no console
     // isso ocorre pois o maior numero do "long int" pode ser representado no "unsigned int".
-    // De forma geral, o "unsigned int" por não representar negativos, consegue representar um numero maior que o "long int"
-    // e por isso não houve troca de representações.
+    // De forma geral, o "unsigned int" por nÃ£o representar negativos, consegue representar um numero maior que o "long int"
+    // e por isso nÃ£o houve troca de representaÃ§Ã£oes.
 
     cout << "F)" << endl;
     ui = ULONG_MAX;
-    cout << "Valor máximo de unsigned int: " << ui << endl;
-    cout << "Valor mínimo de unsigned int: " << 0 << endl;
+    cout << "Valor mÃ¡ximo de unsigned int: " << ui << endl;
+    cout << "Valor mÃ¡ximo de unsigned int: " << 0 << endl;
     
     return 0;
 }
