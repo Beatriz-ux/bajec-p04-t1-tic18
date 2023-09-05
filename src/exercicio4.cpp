@@ -1,43 +1,40 @@
 #include <iostream>
-#include <locale>
-#include <float.h>
+#include <limits>
 #include <iomanip>
+
 using namespace std;
 
-int main(void)
-{
-    setlocale(LC_ALL, "Portuguese_Brazil");
-
-    cout << "A)" << endl;
-    cout << "Valor máximo de float: " << FLT_MAX << endl;
-    cout << "Valor mínimo de float: " << FLT_MIN << endl;
-
-    cout << "B)" << endl;
-    float pif = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679;
-    cout << "Valor de pif = " << pif << endl;
-
-    cout << "C)" << endl;
+int main(){
+    float pif = 3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798214808651328230664709384460955058223172535940812848111745028410270193852110555964462294895493038196442881097566593344612847564823378678316527120190914564856692346034861045432664821339360726024914127372458700660631558817488152092096282925409171536436789259036001133053054882046652138414695194151160943305727036575959195309218611738193261179310511854807446237996274956735188575272489122793818301194912;
+    double pid = 3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798214808651328230664709384460955058223172535940812848111745028410270193852110555964462294895493038196442881097566593344612847564823378678316527120190914564856692346034861045432664821339360726024914127372458700660631558817488152092096282925409171536436789259036001133053054882046652138414695194151160943305727036575959195309218611738193261179310511854807446237996274956735188575272489122793818301194912;
+    
+    cout << "Limite superior do tipo >float< : " << numeric_limits<float>::max() << endl;
+    cout << "Limite inferior do tipo >float< : " << numeric_limits<float>::min() << endl;
+    
     cout << fixed;
-    cout << "Valor de pif = " << setprecision(2) << pif << endl;
-    cout << "Valor de pif = " << setprecision(4) << pif << endl;
-    cout << "Valor de pif = " << setprecision(8) << pif << endl;
-    cout << "Valor de pif = " << setprecision(16) << pif << endl;
+    cout << "\nValor de pif (2 casas decimais): " << setprecision(2) << pif << endl;
+    cout << "Valor de pid (2 casas decimais): " << setprecision(2) << pid << endl;    
+    cout << "Valor de pif (4 casas decimais): " << setprecision(4) << pif << endl;
+    cout << "Valor de pid (4 casas decimais): " << setprecision(4) << pid << endl;
+    cout << "Valor de pif (8 casas decimais): " << setprecision(8) << pif << endl;
+    cout << "Valor de pid (8 casas decimais): " << setprecision(8) << pid << endl;
+    cout << "Valor de pif (16 casas decimais): " << setprecision(16) << pif << endl;
+    cout << "Valor de pid (16 casas decimais): " << setprecision(16) << pid << endl;
+    // o pid se aproxima mais do valor dado para PI, tendo mudanÃ§a so no ultimo digito de impressao
 
-    cout << "D)" << endl;
-    double pid = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679;
-    cout << "Valor de pid = " << pid << endl;
-    cout << "Valor de pid = " << setprecision(2) << pid << endl;
-    cout << "Valor de pid = " << setprecision(4) << pid << endl;
-    cout << "Valor de pid = " << setprecision(8) << pid << endl;
-    cout << "Valor de pid = " << setprecision(16) << pid << endl;
 
-    // Na setima casa decimal, o valor de pif e pid começam a se diferenciar.
+    cout << "\nValor de pid: " << setprecision(60) << pid << endl;
 
-    cout << "E)" << endl;
-    cout << "Valor máximo de double: " << DBL_MAX << endl;
-    cout << "Valor máximo de long double: " << LDBL_MAX << endl;
+    cout << "\ntamanho double: "<< sizeof(double) << " | " << "tamanho long double: "<< sizeof(long double) << endl;
+    // no meu sistema o longo double e o double nao tem o mesmo tamanho
+    // double 8 bytes, long double 16 bytes
+    cout << scientific ;
+    cout << "limite inferior double: "<<numeric_limits<double>::min() << " | " << "limite superior double: "<< numeric_limits<double>::max() << endl;
+    cout << "limite inferior long double: "<< numeric_limits<long double>::min() << " | " << "limite superior long double: "<< numeric_limits<long double>::max() << endl;
+    // os limites inferiores e superiores tambem foram diferentes
+    // double: [2.225073858507201383090232717332404064219215980462331830553327e-308 - 1.797693134862315708145274237317043567980705675258449965989175e+308]
+    // long double [3.362103143112093506262677817321752602598079344846471240108827e-4932 - 1.189731495357231765021263853030970205169063322294624200440324e+4932]
 
-    // Como podemos ver no console, o valor máximo de long double é muito maior que o valor máximo de double.
-
+    
     return 0;
 }
