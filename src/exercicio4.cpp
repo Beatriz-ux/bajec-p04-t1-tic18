@@ -1,40 +1,62 @@
 #include <iostream>
-#include <limits>
-#include <iomanip>
-
 using namespace std;
 
-int main(){
-    float pif = 3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798214808651328230664709384460955058223172535940812848111745028410270193852110555964462294895493038196442881097566593344612847564823378678316527120190914564856692346034861045432664821339360726024914127372458700660631558817488152092096282925409171536436789259036001133053054882046652138414695194151160943305727036575959195309218611738193261179310511854807446237996274956735188575272489122793818301194912;
-    double pid = 3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798214808651328230664709384460955058223172535940812848111745028410270193852110555964462294895493038196442881097566593344612847564823378678316527120190914564856692346034861045432664821339360726024914127372458700660631558817488152092096282925409171536436789259036001133053054882046652138414695194151160943305727036575959195309218611738193261179310511854807446237996274956735188575272489122793818301194912;
-    
-    cout << "Limite superior do tipo >float< : " << numeric_limits<float>::max() << endl;
-    cout << "Limite inferior do tipo >float< : " << numeric_limits<float>::min() << endl;
-    
-    cout << fixed;
-    cout << "\nValor de pif (2 casas decimais): " << setprecision(2) << pif << endl;
-    cout << "Valor de pid (2 casas decimais): " << setprecision(2) << pid << endl;    
-    cout << "Valor de pif (4 casas decimais): " << setprecision(4) << pif << endl;
-    cout << "Valor de pid (4 casas decimais): " << setprecision(4) << pid << endl;
-    cout << "Valor de pif (8 casas decimais): " << setprecision(8) << pif << endl;
-    cout << "Valor de pid (8 casas decimais): " << setprecision(8) << pid << endl;
-    cout << "Valor de pif (16 casas decimais): " << setprecision(16) << pif << endl;
-    cout << "Valor de pid (16 casas decimais): " << setprecision(16) << pid << endl;
-    // o pid se aproxima mais do valor dado para PI, tendo mudança so no ultimo digito de impressao
+// Para pegar os maiores e menores valores possíveis.
+// Os dois funcionam
 
+#include <limits>
+#include <cfloat>
+#include <iomanip> //Para mudar a quantidade de casas decimais
 
-    cout << "\nValor de pid: " << setprecision(60) << pid << endl;
+int main()
+{
+    //a
+    cout << "Maior valor de um float: " << numeric_limits<float>::max() << endl;
+    cout << "Menor valor de um float: " << numeric_limits<float>::min() << endl;
 
-    cout << "\ntamanho double: "<< sizeof(double) << " | " << "tamanho long double: "<< sizeof(long double) << endl;
-    // no meu sistema o longo double e o double nao tem o mesmo tamanho
-    // double 8 bytes, long double 16 bytes
-    cout << scientific ;
-    cout << "limite inferior double: "<<numeric_limits<double>::min() << " | " << "limite superior double: "<< numeric_limits<double>::max() << endl;
-    cout << "limite inferior long double: "<< numeric_limits<long double>::min() << " | " << "limite superior long double: "<< numeric_limits<long double>::max() << endl;
-    // os limites inferiores e superiores tambem foram diferentes
-    // double: [2.225073858507201383090232717332404064219215980462331830553327e-308 - 1.797693134862315708145274237317043567980705675258449965989175e+308]
-    // long double [3.362103143112093506262677817321752602598079344846471240108827e-4932 - 1.189731495357231765021263853030970205169063322294624200440324e+4932]
+    //b
+    float pif = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482133936072602491412737245870066063155881748815209209628292540917153643678925903600113305305488204665213841469519415116094;
+    cout << pif << endl;
 
-    
+    //c
+    //*
+    cout << setprecision(3) << pif << endl;
+    cout << setprecision(5) << pif << endl;
+    cout << setprecision(9) << pif << endl;
+    cout << setprecision(17) << pif << endl;
+    //*/
+
+    //d
+    double pid = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482133936072602491412737245870066063155881748815209209628292540917153643678925903600113305305488204665213841469519415116094;
+    cout << setprecision(6);
+    cout << "double/ pid: " << endl << pid << endl;
+    // Caso o setprecision não tivesse sido alterado, o cout imprimiria "3.14159", o mesmo
+    // número de casas decimais do float
+
+    //e
+    cout << setprecision(3) << pid << endl;
+    cout << setprecision(5) << pid << endl;
+    cout << setprecision(9) << pid << endl;
+    cout << setprecision(17) << pid << endl;
+
+    //f
+    /*
+        Enquanto float imprimiu
+        3.1416
+        3.14159274
+        3.1415927410125732
+
+        o double imprimiu
+        3.1416
+        3.14159265
+        3.1415926535897931
+
+        ou seja, a partir da 7ª casa decimal, o float acaba ficando maior do que
+        o double, talvez por estar arredondando os valores, ao invés de imprimir
+        de forma mais literal, como o double (que ainda alterou o valor de pi, 
+        mas em um grau menor)
+    */
     return 0;
+
+
 }
